@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>	
+<head>						
+	<title>Skills</title>
+	<link rel="stylesheet" type="text/css" href="skill.css">
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet"> 
+  <script type="text/javascript">
+  var downloadResume = function(){
+    window.open('./resume.pdf',"_blank");
+  }
+  var login = function(){
+         var username = document.getElementById('user').value;
+         var password = document.getElementById('pass').value;
+
+         if(username.length == 0)
+          window.alert("Username required")
+        if(password.length == 0)
+          window.alert("Password required")
+
+        if(username.length !=0 && password.length!=0){
+          //check details to db
+        }
+       }
+
+       var checkin = function(){
+        var name = document.getElementById('c_name').value;
+         var lname = document.getElementById('c_lastname').value;
+         var email = document.getElementById('c_email').value;
+         var username = document.getElementById('c_user').value;
+         var password = document.getElementById('c_password').value;
+         var repeatpassword = document.getElementById('c_repeatpassword').value;
+
+          if(name.length == 0)
+          window.alert("Name required")
+        if(lname.length == 0)
+          window.alert("Lname required")
+        if(email.length == 0)
+          window.alert("Email required")
+         if(username.length == 0)
+          window.alert("Username required")
+        if(password.length == 0)
+          window.alert("Password required")
+        if(repeatpassword.length == 0)
+          window.alert(" Repeat Password required")
+
+        if(name.length !=0 && lname.length !=0 && email.length !=0 && username.length !=0 && password.length!=0 && repeatpassword.length !=0  ){
+          //check details to db
+        }
+       }
+     </script>
+ </head>
+ <body>
+ <nav>
+          <ul>
+          <li class="number1"><a href="home.html">KAVYA SRI G</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="skill.html">My Skills</a></li>
+          <li><a href="recommendation.html">Publication</a></li>
+          <li><a href="latestwork.html">Latest Works</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hire.html">Hire Me</a></li>
+          <li onclick="document.getElementById('login').style.display='block';">Log in</li>
+          <li onclick="document.getElementById('checkin').style.display='block';">Sign up</li>
+        </ul>
+      </nav>
+       <div id="login">
+          <div class="header" style="color: black;">
+                Log in<button onclick="document.getElementById('login').style.display='none';" class="closeBtn">X</button>
+          </div>
+
+          <div class="form">
+              <label>User:</label><br>
+              <input type="text" id="user">
+
+              <br><br>
+              <label>Password:</label><br>
+              <input type="text" id="pass">
+          </div>
+
+          <div class="footer">
+            <button class="primaryBtn" onclick="login()">Get In</button>
+            <button class="primaryBtn" onclick="document.getElementById('login').style.display='none';">Close</button>
+            
+        </div>
+    </div>
+
+
+    <div id="checkin">
+            <div class="header" style="color: black;">
+                  check in<button onclick="document.getElementById('checkin').style.display='none';" class="closeBtn">X</button>
+            </div>
+  
+            <div class="form">
+                <label>Name:</label><br>
+                <input id="c_name" type="text">
+  
+                <br><br>
+                <label>Last Name:</label><br>
+                <input id="c_lastname" type="text">
+
+                <br><br>
+                <label>Email:</label><br>
+                <input id="c_email" type="text">
+
+                <br><br>
+                <label>User:</label><br>
+                <input id="c_user" type="text">
+
+                <br><br>
+                <label>Password:</label><br>
+                <input id="c_password" type="text">
+
+                <br><br>
+                <label>Repeat Password:</label><br>
+                <input id="c_repeatpassword" type="text">
+            </div>
+  
+            <div class="footer">
+              <button class="primaryBtn" onclick="checkin()">Save</button>
+              <button class="primaryBtn" onclick="document.getElementById('login').style.display='none';">Close</button>
+              
+          </div>
+ </div>
+</nav>
+ <h1>SKILLS&<br>EXPERTISE</h1>
+ <p>Front-end Developer</p>
+  <div class=f1>
+ 	<img src="profile1.png" height="500" width="500">
+ 	
+ <div class=second>
+ 	<table style="margin-top:-150px;" >
+ 		<tr>
+ 			<td><img src="log1.jpg" height="60" weight="60" ></td>
+ 			<td>LANGUAGES<br>Python, HTML, CSS, PHP, JavaScript<br>C, C++, XML, Bootstrap, UNIX</td><br>
+ 			<td><img src="log2.jpg" height="60" weight="60" ></td>
+ 			<td>DATABASES<br>MySQL, Oracle DB, SQLite<br>Microsoft SQL Server</td>
+ 		</tr><br>
+ 		<tr>
+ 			<td><img src="log3.jpg" height="60" weight="60" ></td>
+ 			<td>TOOLS<br>Eclipse, Netbeans, phpMyadmin, Wordpress<br>VisualStudio, PythonIDE, AnacondaPython<br>Postman, Oracle SQL*Plus, Github</td>
+ 			<td><img src="log4.jpg"height="60" weight="60" ></td>
+ 			<td>CLOUD SERVICES<br>Amazon Web Services(AWS)<br>Microsoft Azure<br>IBM Cloud Foundry</td>
+ 		</tr>
+</table>
+<br>
+<div class="third">
+	<br><br>
+<h2>Front-End Developer</h2> 
+<table>
+	<tr>
+		<td><img src="device01.png"></td>
+		<td><img src="device02.png"></td>
+			<td><img src="device03.png"></td>
+			</tr>
+			</table>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="work experience">
+            <h4 class="work">WORK EXPERIENCE</h4>
+            <p class="work_exp"></p>
+
+            <br>
+            <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">JAN - AUG</p>
+                	<p class="date">2018</p>
+                	<p class="sub"> AARIKA INFOSYSTEMS</p>
+                	<p class="role">Software Intern</p>  
+                </div>
+                <div class="right sk_right">
+                	 <div class="description">
+                	 	<p class="role1">SOFTWARE INTERN</p>
+                	 	<p class="desc">• Designed a client-server model for "Employee Management Application" using Python IDLE and MySQL.<br>• Created the entity-relationship model, MySQL Queries, and stored procedures to manage the data extraction and manipulation.<br>• The application reduced the manual work of using CSV to access and manage salary calculations. 9/10 managers found this effective and user-friendly.</p>
+                	
+                    </div>
+                </div>
+            </div>
+
+<br>
+<div class="education">
+            <h4 class="edu">EDUCATION</h4>
+
+            <br>
+            <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">AUGUST - MAY</p>
+                  <p class="date">2019-2021</p>
+                  <hr>
+                  <p class="sub">MASTER'S DEGREE</p>  
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="subj">MASTER OF SCIENCE IN COMPUTER SCIENCE</p>
+                    <p class="desc">UNIVERSITY OF TEXAS AT ARLINGTON</p>
+                  
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+                <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">AUGUST - MAY</p>
+                  <p class="date">2015-2019</p>
+                  <hr>
+                  <p class="sub">BACHELOR'S DEGREE</p>
+         
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="subj">BACHELOR OF ENGINEERING IN COMPUTER SCIENCE</p>
+                    <p class="desc">B.N.M INSTITUTE OF TECHNOLOGY</p>
+                  
+                    </div>
+                </div>
+            </div>
+            <br>
+           
+
+ <div class="work experience">
+            <h4 class="work">PROJECTS</h4>
+           
+            <br>
+            <div class="sec">
+                <div class="left sk_left">
+                  <p class="month"></p>
+                	<p class="date"></p>
+                	<p class="sub">Identifying Phishing Websites Through URL Parsing</p>
+                	<p class="role"></p>  
+                </div>
+                <div class="right sk_right">
+                	 <div class="description">
+                	 	<p class="role1"></p>
+                	 	<p class="desc">• Designed and developed a content filtering application for detecting phishing attacks by checking the Uniform Resource Locators.<br>• Compared four machine learning algorithms for performance with the same dataset to recognize phishing websites.<br>• Achieved an average accuracy of 83% from the Decision tree, while the Random forest tree gave an average accuracy of 85%, whereas the Logistic regression and Naïve Bayes obtained an accuracy of 76% and 55% respectively on average.<br>• Technologies used: Anaconda Python, Jupyter Notebook, and Machine Learning.</p>
+                	
+                    </div>
+                </div>
+            </div>
+ <div class="sec">
+                <div class="left sk_left">
+                  <p class="month"></p>
+                  <p class="date"></p>
+                  <p class="sub">Several Website deployed to the cloud in Python Flask
+</p>
+                  <p class="role"></p>  
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="role1"></p>
+                    <p class="desc">• Customized several web apps that interacted with the database within a time frame of 90 minutes.<br>• Created an earthquake app, visualized and compared the data using heat maps & color maps in seaborn for over 100 years, and categorized the number of earthquakes in the AWS cloud.<br>• Deployed the application to cloud service platforms: Microsoft Azure, IBM Cloud, and Amazon Web Services (AWS) using CLI.<br>• Technologies used: Python Flask, Python,HTML, CSS, and JS.</p>
+                  
+                    </div>
+                </div>
+            </div>
+            <div class="sec">
+                <div class="left sk_left">
+                  <p class="month"></p>
+                  <p class="date"></p>
+                  <p class="sub">Hotel Management Application in Android </p>
+                  <p class="role"> </p>  
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="role1"></p>
+                    <p class="desc">• Designed and developed a Hotel booking system mobile app in android.<br>• Led the team and performed various tasks including meeting arrangement, task assignment, document, and technical review.<br>• Technologies used: Android studio, phpMyAdmin, XML, Java, PHP, and Postman.</p>
+                  
+                    </div>
+                </div>
+            </div>           
+
+</body>
+</html>

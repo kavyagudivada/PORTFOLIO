@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet"> 
+     <script type="text/javascript">
+  var downloadResume = function(){
+    window.open('./resume.pdf',"_blank");
+  }
+  var login = function(){
+         var username = document.getElementById('user').value;
+         var password = document.getElementById('pass').value;
+
+         if(username.length == 0)
+          window.alert("Username required")
+        if(password.length == 0)
+          window.alert("Password required")
+
+        if(username.length !=0 && password.length!=0){
+          //check details to db
+        }
+       }
+
+       var checkin = function(){
+        var name = document.getElementById('c_name').value;
+         var lname = document.getElementById('c_lastname').value;
+         var email = document.getElementById('c_email').value;
+         var username = document.getElementById('c_user').value;
+         var password = document.getElementById('c_password').value;
+         var repeatpassword = document.getElementById('c_repeatpassword').value;
+
+          if(name.length == 0)
+          window.alert("Name required")
+        if(lname.length == 0)
+          window.alert("Lname required")
+        if(email.length == 0)
+          window.alert("Email required")
+         if(username.length == 0)
+          window.alert("Username required")
+        if(password.length == 0)
+          window.alert("Password required")
+        if(repeatpassword.length == 0)
+          window.alert(" Repeat Password required")
+
+        if(name.length !=0 && lname.length !=0 && email.length !=0 && username.length !=0 && password.length!=0 && repeatpassword.length !=0  ){
+          //check details to db
+        }
+       }
+</script>
+</head>
+
+<body class="section_wrapper">
+    <div >
+      <nav>
+          <ul>
+          <li><a href="home.html">KAVYA SRI G</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="skill.html">My Skills</a></li>
+          <li><a href="recommendation.html">Publication</a></li>
+          <li><a href="latestwork.html">Latest Works</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hire.html">Hire Me</a></li>
+          <li onclick="document.getElementById('login').style.display='block';">Log in</li>
+          <li onclick="document.getElementById('checkin').style.display='block';">Sign up</li>
+        </ul>
+      </nav>
+      
+
+      <div id="login">
+            <div class="header">
+                  Log in<button onclick="document.getElementById('login').style.display='none';" class="closeBtn">X</button>
+            </div>
+  
+            <div class="form">
+                <label>User:</label><br>
+                <input type="text" id="user">
+  
+                <br><br>
+                <label>Password:</label><br>
+                <input type="text" id="pass">
+            </div>
+  
+            <div class="footer">
+              <button class="primaryBtn" onclick="login()">Get In</button>
+              <button class="primaryBtn" onclick="document.getElementById('login').style.display='none';">Close</button>
+              
+          </div>
+      </div>
+  
+  
+      <div id="checkin">
+              <div class="header">
+                    check in<button onclick="document.getElementById('checkin').style.display='none';" class="closeBtn">X</button>
+              </div>
+    
+              <div class="form">
+                  <label>Name:</label><br>
+                  <input id="c_name" type="text">
+    
+                  <br><br>
+                  <label>Last Name:</label><br>
+                  <input id="c_lastname" type="text">
+  
+                  <br><br>
+                  <label>Email:</label><br>
+                  <input id="c_email"  type="text">
+  
+                  <br><br>
+                  <label>User:</label><br>
+                  <input id="c_user" type="text">
+  
+                  <br><br>
+                  <label>Password:</label><br>
+                  <input id="c_password" type="text">
+  
+                  <br><br>
+                  <label>Repeat Password:</label><br>
+                  <input id="c_repeatpassword" type="text">
+              </div>
+    
+              <div class="footer">
+                <button class="primaryBtn" onclick="checkin()">Save</button>
+                <button class="primaryBtn" onclick="document.getElementById('login').style.display='none';">Close</button>
+                
+            </div>
+        </div>
+
+
+        <div class="mainSection">
+            <h4 class="heading">BLOG</h4>
+            <p class="hire_info">I'm looking to expand my profile while I'm on top and young. KSG brings your content to life in stunning clarity</p>
+
+            <br>
+            <div class="section">
+                <div class="left">
+                    <img src="./graphicdesign.png">
+                </div>
+                <div class="right">
+                    <div class="cartinfo">
+                        <p class="price">GRAPHIC DESIGN</p>
+                        <p class="sub">Crafting the future of digital experience through emotional design!</p>
+                        <br>
+                        <br>
+                        <p><a href="http://kavyasrigudivada.uta.cloud/personalblog/uncategorized/blog-1/">GET IN</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                    <div class="left">
+                        <img src="./webdesign.jpg" alt="cart1">
+                    </div>
+                    <div class="right">
+                        <div class="cartinfo">
+                            <p class="price">WEB DESIGN</p>
+                            <p class="sub"> Design is the process of collecting ideas, and aesthetically arranging and<br> implementing them, guided by certain principles for a specific purpose.</p>
+                            <br>
+                        <br>
+                        <p><a href="http://kavyasrigudivada.uta.cloud/personalblog/uncategorized/blog-2/">GET IN</a></p>
+                            
+                        </div>
+                    </div>
+            </div>
+
+            <div class="section">
+                    <div class="left">
+                        <img src="./interiordesign.jpg" alt="cart1">
+                    </div>
+                    <div class="right">
+                        <div class="cartinfo">
+                          <p class="price">INTERIOR DESIGN</p>
+                            <p class="sub"> Interior design is the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space.</p>
+                            <br>
+                        <br>
+                        <p><a href="http://kavyasrigudivada.uta.cloud/personalblog/uncategorized/blog-3/">GET IN</a></p> 
+                        </div>
+                    </div>
+            </div>
+            <div class="section">
+                    <div class="left">
+                        <img src="./gamedesign.png" alt="cart1">
+                    </div>
+                    <div class="right">
+                        <div class="cartinfo">
+                           <p class="price">GAME DESIGN</p>
+                            <p class="sub"> Game Design is the art of applying design and aesthetics to create a game for entertainment or for educational, exercise, or experimental purposes.</p>
+                            <br>
+                        <br>
+                        <p><a href="http://kavyasrigudivada.uta.cloud/personalblog/uncategorized/game-design/">GET IN</a></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="section">
+                    <div class="left">
+                        <img src="./advertising.jpg" alt="cart1">
+                    </div>
+                    <div class="right">
+                        <div class="cartinfo">
+                           <p class="price">ADVERTISING</p>
+                            <p class="sub">Advertising is a marketing communication that employs an openly sponsored, non-personal message to promote or sell a product, service or idea. </p>
+                            <br>
+                        <br>
+                        <p><a href="http://kavyasrigudivada.uta.cloud/personalblog/uncategorized/advertising/">GET IN</a></p> 
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        </div>
+
+
+</body>
+
+</html> 

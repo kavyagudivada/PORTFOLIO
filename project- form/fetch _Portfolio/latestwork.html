@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="work.css">
+     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+
+     <script type="text/javascript">
+           function validateForm() 
+    {
+      var x = document.forms["signupform"]["fname"].value;    //first name
+      if (x == "") 
+      {
+        alert("First Name must be filled out");
+        return false;
+      }
+
+      var x = document.forms["signupform"]["lname"].value;    //last name
+      if (x == "") 
+      {
+        alert("Last Name must be filled out");
+        return false;
+      }
+
+      var x = document.forms["signupform"]["uname"].value;    //user name
+      if (x == "") 
+      {
+        alert("User Name must be filled out");
+        return false;
+      }
+
+      var pwd =  document.forms["signupform"]["pwd"].value;     //pwd check
+      var cpwd=  document.forms["signupform"]["cnfrmpwd"].value;
+      if(pwd != cpwd)
+      {
+        alert("New password does not match confirmation check");
+        return false; 
+      }
+  }
+
+  function validateloginform() 
+  {
+    
+    var x = document.forms["loginform"]["uname"].value;   //user name
+      if (x == "") 
+      {
+        alert("User Name must be filled out");
+        return false;
+      }
+  }
+
+  // Get the modal
+  var modal = document.getElementById('login');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Get the modal
+  var modal1 = document.getElementById('signup');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+  }
+
+  // Get the modal3 for contact us
+  var modal2 = document.getElementById('contactme');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+  }
+var sendEmail = function(){
+  
+  var name = document.getElementById("c_name").value;
+  var email = document.getElementById("c_email").value;
+  var message = document.getElementById("c_message").value;
+
+ if (name.length !=0 && email.length!=0 && message.length !=0) {
+          let subject = "Send from my portfolio"
+          let body = "Name:"+name+"\n Email:"+email+"\n Message:"+message;
+          window.open("mailto:kavyasri.gudivada@mavs.uta.edu?subject="+subject+"&body="+body); 
+        }
+      }
+
+
+
+     </script>
+</head>
+<body>
+    <div>
+      <nav>
+          <ul>
+          <li><a href="home.html">KAVYA SRI G</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="skill.html">My Skills</a></li>
+          <li><a href="recommendation.html">Recommendation</a></li>
+          <li><a href="latestwork.html">Latest Works</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hire.html">Hire Me</a></li>
+      <li onclick="document.getElementById('login').style.display='block';"><a href='#'>LOGIN</a></li>
+      <li onclick="document.getElementById('signup').style.display='block';"><a href='#'>SIGN UP</a></li>
+        </ul>
+      </nav>
+      <!-- STARTING CONTACT US -->
+
+      <!-- The Modal -->
+      <div id="contactme" class="modal2">
+        <span onclick="document.getElementById('contactme').style.display='none'"
+        class="fclose" title="Close Modal">&times;</span>
+
+
+      <!-- Modal Content -->
+      <form class="modal-content2" action="contactus.php" method="post">    
+  
+        <div class="fcontainer">
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" id="c_name" name="uname" required>
+     
+          <label for="uname"><b>Email</b></label>
+          <input type="Email" placeholder="Enter Email" id="c_email" name="mail" required>
+          <br>
+          <label for="uname"><b>Message</b></label>
+          <input type="text" placeholder="Enter Message" id="c_message" name="msg" required>
+
+         <button type="submit" onclick="sendEmail()">SEND</button> 
+     
+        </div>
+
+        <div class="fcontainer" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('contactme').style.display='none'" class="fcancelbtn">Cancel</button>
+      
+        </div>
+      </form>
+    </div>
+    <!-- ENDING CONTACT US-->
+
+
+    <!-- The Modal -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'"
+      class="fclose" title="Close Modal">&times;</span>
+
+      <!-- Modal Content -->
+      <form name="loginform" class="modal-content" action="authenticate.php" method="POST" >
+    
+        <div class="fcontainer">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="pwd"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pwd" required>
+
+   <!--       <button type="submit" onclick="return validateloginform()">Login</button> -->
+     
+        </div>
+
+        <div class="fcontainer" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="fcancelbtn">CLOSE</button>
+          <button type="submit" onclick="return validateloginform()" class="fcancelbtn">GET IN</button>
+      
+        </div>
+      </form>
+    </div>
+    <!-- ENDING FORM PAGE-->
+
+    <!-- The Modal -->
+    <div id="signup" class="modal1">
+      <span onclick="document.getElementById('signup').style.display='none'"
+      class="fclose" title="Close Modal">&times;</span>
+
+      <!-- Modal Content -->
+      <form  name="signupform" class="modal-content1" action="signup.php" method="POST" >    
+    
+    
+        <div class="fcontainer">
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="fname" required>
+
+          <label for="uname"><b>Last Name</b></label>
+          <input type="text" placeholder="Enter Last name" name="lname" required>
+
+          <label for="uname"><b>Email</b></label>
+          <input type="Email" placeholder="Enter Email" name="mail" required>    <!-- for HTML5 validation -->
+          <br>
+          <label for="uname"><b>User Name</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pwd" required>    <!-- for HTML5 validation -->
+
+          <label for="psw"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Enter Password" name="cnfrmpwd" required>
+
+    <!--      <button type="submit" name="submit" onclick="return validateForm()" >Register</button>  -->
+     
+        </div>
+
+        <div class="fcontainer" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('signup').style.display='none'" class="fcancelbtn">CLOSE</button>
+          <button type="submit" onclick="return validatesignupform()" class="fcancelbtn">SAVE</button>
+      
+        </div>
+      </form>
+    </div>
+    <!-- ENDING SIGN UP -->
+      <br>
+      <br>
+      <h1 id="lwork">MY LATEST WORK</h1>
+      <p>I am looking to expand my portfolio while I am on top and while I am young!!</p>
+      <br>
+      <br>
+      <br>
+      <button onclick="document.getElementById('contactme').style.display='block';" class="button1" >Show All</button>   
+
+  <button class="button1"  >Websites</button>   
+
+  <button class="button1"  >Design</button>
+  <button class="button1" > Photography</button>
+
+   <div id="contactme" style=" height: 350px;">
+              <div class="header">
+                    Have a project you would like to discuss?
+              </div>
+    
+              <div class="form">
+                  <label>Name:</label><br>
+                  <input id="contact_name" type="text" placeholder="Enter a valid name">
+    
+                  <br><br>
+                  <label>Email:</label><br>
+                  <input id="contact_email" type="text" placeholder="Enter a valid email">
+  
+                  <br><br>
+                  <label>Message:</label><br>
+                  <input id="contact_message" type="text" placeholder="Message">
+  
+              </div>
+    
+              <div class="footer">
+                <button class="primaryBtn" onclick="sendEmail();">SEND</button>
+                <button class="primaryBtn" onclick="document.getElementById('contactme').style.display='none';">Close</button>
+                
+            </div>
+        </div>
+<br>
+<div class="work">
+  <table style="border-spacing: 25px 30px;">
+    <tr>
+      <td><img src="app1.png" height="150" width="150" ></td>
+      <td><br>APPS<br>Websites</td><br>
+      <td><img src="app2.png" height="150" width="150" ></td>
+      <td>PLAYER PASS LIST<br>Websites</td>
+      <td><img src="app3.png" height="150" width="150" ></td>
+      <td><br> STAFF TRAINING<br> websites</td>
+    </tr><br>
+    <tr>
+      <td><img src="app4.png" height="150" width="150" ></td>
+      <td>ASGARDIA ACADEMY<br>websites</td>
+      <td><img src="app5.png"height="150" width="150" ></td>
+      <td>MI ABC<br>apps</td>
+      <td><img src="app6.jpg" height="150" width="150" ></td>
+      <td>XYZ<br>apps</td>
+    </tr>
+     <tr>
+      <td><img src="app7.jpg" height="150" width="150" ></td>
+      <td>STAFF TRAINING<br>apps</td>
+      <td><img src="app8.png"height="150" width="150" ></td>
+      <td>3D DESIGN<br>Blender</td>
+      <td><img src="app9.png" height="150" width="150" ></td>
+      <td>3D DESIGN<br> Blender</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

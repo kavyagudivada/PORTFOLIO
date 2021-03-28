@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet"> 
+      <script type="text/javascript">
+      function validateForm() 
+    {
+      var x = document.forms["signupform"]["fname"].value;    //first name
+      if (x == "") 
+      {
+        alert("First Name must be filled out");
+        return false;
+      }
+
+      var x = document.forms["signupform"]["lname"].value;    //last name
+      if (x == "") 
+      {
+        alert("Last Name must be filled out");
+        return false;
+      }
+
+      var x = document.forms["signupform"]["uname"].value;    //user name
+      if (x == "") 
+      {
+        alert("User Name must be filled out");
+        return false;
+      }
+
+      var pwd =  document.forms["signupform"]["pwd"].value;     //pwd check
+      var cpwd=  document.forms["signupform"]["cnfrmpwd"].value;
+      if(pwd != cpwd)
+      {
+        alert("New password does not match confirmation check");
+        return false; 
+      }
+  }
+
+  function validateloginform() 
+  {
+    
+    var x = document.forms["loginform"]["uname"].value;   //user name
+      if (x == "") 
+      {
+        alert("User Name must be filled out");
+        return false;
+      }
+  }
+
+  // Get the modal
+  var modal = document.getElementById('login');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Get the modal
+  var modal1 = document.getElementById('signup');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+  }
+
+  // Get the modal3 for contact us
+  var modal2 = document.getElementById('contactme');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+  }
+var sendEmail = function(){
+  
+  var name = document.getElementById("c_name").value;
+  var email = document.getElementById("c_email").value;
+  var message = document.getElementById("c_message").value;
+
+ if (name.length !=0 && email.length!=0 && message.length !=0) {
+          let subject = "Send from my portfolio"
+          let body = "Name:"+name+"\n Email:"+email+"\n Message:"+message;
+          window.open("mailto:kavyasri.gudivada@mavs.uta.edu?subject="+subject+"&body="+body); 
+        }
+      }
+   </script>
+</head>
+
+<body class="section_wrapper">
+    <div >
+      <nav>
+          <ul>
+          <li><a href="home.html">KAVYA SRI G</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="skill.html">My Skills</a></li>
+          <li><a href="recommendation.html">Recommendation</a></li>
+          <li><a href="latestwork.html">Latest Works</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hire.html">Hire Me</a></li>
+          <li onclick="document.getElementById('login').style.display='block';">Log in</li>
+          <li onclick="document.getElementById('signup').style.display='block';">Sign up</li>
+        </ul>
+      </nav>
+      
+
+       <!-- STARTING CONTACT US -->
+
+      <!-- The Modal -->
+      <div id="contactme" class="modal2">
+        <span onclick="document.getElementById('contactme').style.display='none'"
+        class="fclose" title="Close Modal">&times;</span>
+
+
+      <!-- Modal Content -->
+      <form class="modal-content2" action="contactus.php" method="post">    
+  
+        <div class="fcontainer">
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name"   id="c_name" name="uname" required>
+     
+          <label for="uname"><b>Email</b></label>
+          <input type="Email" placeholder="Enter Email" id="c_email" name="mail" required>
+          <br>
+          <label for="uname"><b>Message</b></label>
+          <input type="text" placeholder="Enter Message" id="c_message" name="msg" required>
+
+          
+     
+        </div>
+
+        <div class="fcontainer" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('contactme').style.display='none'" class="fcancelbtn">Cancel</button>
+      <button type="submit" onclick="sendEmail()">SEND</button>
+     
+        </div>
+      </form>
+    </div>
+    <!-- ENDING CONTACT US-->
+
+
+    <!-- The Modal -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'"
+      class="fclose" title="Close Modal">&times;</span>
+
+      <!-- Modal Content -->
+      <form name="loginform" class="modal-content" action="authenticate.php" method="POST" >
+    
+        <div class="fcontainer">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="pwd"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pwd" required>
+
+     <!--     <button type="submit" onclick="return validateloginform()">Login</button> -->
+     
+        </div>
+
+        <div class="fcontainer" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="fcancelbtn">CLOSE</button>
+      <button type="submit" onclick="return validateloginform()" class="fcancelbtn">GET IN</button>
+        </div>
+      </form>
+    </div>
+    <!-- ENDING FORM PAGE-->
+
+    <!-- The Modal -->
+    <div id="signup" class="modal1">
+      <span onclick="document.getElementById('signup').style.display='none'"
+      class="fclose" title="Close Modal">&times;</span>
+
+      <!-- Modal Content -->
+      <form  name="signupform" class="modal-content1" action="signup.php" method="POST" >    
+    
+    
+        <div class="fcontainer">
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="fname" required>
+
+          <label for="uname"><b>Last Name</b></label>
+          <input type="text" placeholder="Enter Last name" name="lname" required>
+
+          <label for="uname"><b>Email</b></label>
+          <input type="Email" placeholder="Enter Email" name="mail" required>    <!-- for HTML5 validation -->
+          <br>
+          <label for="uname"><b>User Name</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pwd" required>    <!-- for HTML5 validation -->
+
+          <label for="psw"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Enter Password" name="cnfrmpwd" required>
+
+  <!--        <button type="submit" name="submit" onclick="return validateForm()" >Register</button> -->
+     
+        </div>
+
+        <div class="fcontainer" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('signup').style.display='none'" class="fcancelbtn">CLOSE</button>
+      <button type="submit" onclick="return validatesignupform()" class="fcancelbtn">SAVE</button>
+        </div>
+      </form>
+    </div>
+    <!-- ENDING SIGN UP -->
+
+        <div class="mainSection">
+            <h4 class="heading">HIRE ME</h4>
+            <p class="hire_info">I'm looking to expand my profile while I'm on top and young.</p>
+
+            <br>
+            <div class="section">
+                <div class="left">
+                    <img src="./cart1.png" alt="cart1">
+                </div>
+                <div class="right">
+                    <div class="cartinfo">
+                        <p class="price">$300</p>
+                        <p class="sub">Design for natural people</p>
+                        <p class="logo">Logo</p>
+                        <p class="advertising">Advertising image to print</p>
+                        <p class="photoediting">Photo Editing</p>
+                        <p style="color: white;" onclick="document.getElementById('contactme').style.display='block';">Contact Us</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                    <div class="left">
+                        <img src="./cart2.png" alt="cart1">
+                    </div>
+                    <div class="right">
+                        <div class="cartinfo">
+                            <p class="price">$650</p>
+                            <p class="sub">Informative website design</p>
+                            <p class="logo">Logo</p>
+                            <p class="photo editing">Photo Editing</p>
+                            <p class="Maintainence for 6 months"></p>
+                            <p style="color: white;" onclick="document.getElementById('contactme').style.display='block';">Contact Us</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="section">
+                    <div class="left">
+                        <img src="./cart3.png" alt="cart1">
+                    </div>
+                    <div class="right">
+                        <div class="cartinfo">
+                            <p class="price">$1450</p>
+                            <p class="sub"> 3D Character Design</p>
+                            <p class="sketch">Character Sketch</p>
+                            <p class="development">Digitizaton and Development</p>
+                            <p class="Animation">Animation</p>
+    
+                           <p style="color: white;" onclick="document.getElementById('contactme').style.display='block';">Contact Us</p>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        </div>
+<br>
+        <br>
+        <!-- Skills and Knowledge Page-->
+        <div class="sk1">
+          <h3 class="skill"> SKILLS & KNOWLEDGE </h3>
+          <p class="knowledge">I am looking to expand my profile while I am on top and while I am young!!</p>
+          <div class="progressclass">
+<br>
+<br>
+
+ <div class="progressclass">
+                        <h2><b>SOFTWARE</b></h2>
+                        <br>
+                        <h5>HTML</h5>
+                        <progress class="progress" max="100" value="65" data-label="50% Complete"> 65% </progress>
+                        <br>
+                        <h5>JAVASCRIPT</h5>
+                        <progress class="progress" max="100" value="50" > 50% </progress>
+                        <br>
+                        <h5>BOOTSTRAP</h5>
+                        <progress class="progress" max="100" value="80"> 80% </progress>
+                        <br>
+                        <h5>CSS</h5>
+                        <progress class="progress" max="100" value="91"> 91% </progress>
+                        <br>
+                        <h5>BLENDER</h5>
+                        <progress class="progress" max="100" value="75"> 75% </progress>
+                        <br>
+                        <h5>PHOTOSHOP</h5>
+                        <progress class="progress" max="100" value="93"> 93% </progress>
+                        <br>
+                </div>
+                <br>
+                <br>
+                <div class="recognition">
+  <h2><b>RECOGNITION</b></h2>
+</div>
+
+
+
+<div class="reccontent">
+  <h4 style="color:blue">International Design Award 2014</h4>
+  <p style="font-size:10px;">15th March 2014/New York State University <br>Pace:3 <br><br></p>
+  <h4 style="color:blue">LOGO Design Contest 2013</h4>
+  <p style="font-size:10px;">12th Oct 2013/Chicago House <br>Pace:3 <br><br></p>
+  <h4 style="color:blue">Web Design Contest 2013</h4>
+  <p style="font-size:10px;">12th Oct 2013/New York State University <br>Pace:3 <br><br></p>
+
+
+</div>
+
+<br>
+<br>
+<div class="k1">
+
+<br>
+<br>
+<h2><b>KNOWLEDGE</b></h2>
+  <ul >
+  <li>Python</li>
+  
+  <li>Java</li>
+
+  <li>HTML</li>
+   
+
+  <li>Css</li>
+  
+  <li>SQL</li>
+  
+  <li>C</li>
+  
+</ul> 
+</div>
+
+<div class="k2">
+  <ul>
+  <li>C++</li>
+  
+  <li>Javascript</li>
+
+  <li>XML</li>
+   
+
+  <li>Computer Graphics</li>
+  
+  <li>Data Mining</li>
+  
+  <li>Machine Learning</li>
+  
+</ul> 
+</div>
+<br>
+<br>
+<h2><b>HOBBIES & INTEREST</b></h2>
+  <ul >
+  <li>Python</li>
+  
+  <li>Java</li>
+
+  <li>HTML</li>
+   
+
+  <li>Css</li>
+  
+  <li>SQL</li>
+  
+  <li>C</li>
+  
+</ul> 
+</div>
+
+
+</body>
+
+</html> 

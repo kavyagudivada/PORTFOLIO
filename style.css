@@ -1,0 +1,301 @@
+/*HOME*/
+
+*, body{
+    margin: 0;
+    padding: 0;
+    font: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Rajdhani', sans-serif;
+}
+.wrapper{
+    background: lightcyan;
+    width: 100%;
+    height: 100vh;
+    background: url("./photo.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    color: yellow;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000033;
+    text-align: center;
+    justify-content: center;
+}
+li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    justify-content: center;
+  }
+  
+  li:hover {
+    color: yellow;
+    cursor: pointer;
+  }
+
+  li:first-child{
+      padding-right: 10%;
+      padding-left: 20px;
+  }
+
+.info{
+    text-align: center;
+    margin-top: 100px;
+    color: darkblue;
+}
+
+.head{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.intro{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+
+.btn{
+    margin-top: 100px;
+    cursor: pointer;
+    padding: 15px 35px;
+    border: none;
+    background: #000033;
+    color: #728ff7;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #3fcaff 0%, #a4ffb0 51%, #3fcaff 100%);
+}
+
+#login, #checkin, #contactme{
+    background: white;
+    width: 600px;
+    height: 250px;
+    float: right;
+    margin-top: 20px;
+    margin-left: 25%;
+    display: none;
+    position: absolute;
+    z-index: 99 !important;
+    border-radius: 5px;
+    padding-top: 1em;
+}
+
+#checkin{
+    height: 500px;
+}
+
+.header{
+    border-bottom: 1px solid #ddd;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    font-weight: 600;
+    height: 20px;
+}
+
+.form{
+    padding: 1em;
+}
+input{
+    width: 98%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.primaryBtn{
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: none;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.footer{
+    border-top: 1px solid #dddddd;
+    margin-top: 6%;
+    padding: 10px;
+}
+
+.closeBtn{
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+/* HIRE */
+.section_wrapper{
+    background: #00101f;
+    height: 100vh;
+}
+.heading{
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+.mainSection{
+    padding: 20px 40px;
+}
+.hire_info{
+    color: #ddd;
+    opacity: 0.5;
+}
+
+.section{
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-bottom: 2px solid #dddddd;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 120px;
+    height: 100px;
+}
+.left, .right{
+    width: 600px;
+    padding: 30px;
+}
+.left{
+    width: 20%;
+    float: left;
+    border-right: 2px solid #dddddd;
+}
+.right{
+    width: 50%;
+}
+.cartinfo{
+    text-align: center;
+   color: white;
+}
+.cartinfo p{
+    color: grey;
+}
+.cartinfo li{
+    display: unset;
+}
+
+.price{
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.sub{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.contact{
+    margin-top: 0px;
+    margin-top: 0px;
+}
+.skill
+{
+    font-size:50px;
+    color:white;
+}
+.knowledge
+{
+    color:grey;
+}
+.progressclass
+{
+    
+    font-size: 20px;
+   
+    color:white;
+    float:left;
+}
+.progress {
+    text-align: center;
+  
+  color: white;
+  background-color: white;
+
+}
+.recognition {    
+    color: white;
+    font-family: Rajdhani; 
+     
+    
+    font-size: 20px;
+   
+}
+.reccontent  {    
+
+    color: white;
+    
+    font-size: 20px;
+    
+
+}
+.hire
+{
+    font-size:30px;
+}color:white;
+
+/*RECOMMENDATION*/
+
+.rc_section{
+    color: white;
+    font-size: 14px;
+    margin-top: 50px;
+}
+.rc_avatar{
+    height: 500px;
+    width: 20%;
+    float: left;
+}
+.rc_info{
+    width: 80%;
+}
+.avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.infoTxt{
+    line-height: 2.0em;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color:white;
+}
+
+.carousel button{
+    border-radius: 50%;
+    opacity: 0.5;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.btn{
+    margin-top: 100px;
+    cursor: pointer;
+    padding: 15px 35px;
+    border: none;
+    background: #000033;
+    color: #728ff7;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #3fcaff 0%, #a4ffb0 51%, #3fcaff 100%);
+}
+/*SKILLS*/

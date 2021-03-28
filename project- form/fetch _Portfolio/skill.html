@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>	
+<head>						
+	<title>Skills</title>
+	<link rel="stylesheet" type="text/css" href="skill.css">
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet"> 
+  <script type="text/javascript">
+   function validateForm() 
+    {
+      var x = document.forms["signupform"]["fname"].value;    //first name
+      if (x == "") 
+      {
+        alert("First Name must be filled out");
+        return false;
+      }
+
+      var x = document.forms["signupform"]["lname"].value;    //last name
+      if (x == "") 
+      {
+        alert("Last Name must be filled out");
+        return false;
+      }
+
+      var x = document.forms["signupform"]["uname"].value;    //user name
+      if (x == "") 
+      {
+        alert("User Name must be filled out");
+        return false;
+      }
+
+      var pwd =  document.forms["signupform"]["pwd"].value;     //pwd check
+      var cpwd=  document.forms["signupform"]["cnfrmpwd"].value;
+      if(pwd != cpwd)
+      {
+        alert("New password does not match confirmation check");
+        return false; 
+      }
+  }
+
+  function validateloginform() 
+  {
+    
+    var x = document.forms["loginform"]["uname"].value;   //user name
+      if (x == "") 
+      {
+        alert("User Name must be filled out");
+        return false;
+      }
+  }
+
+  // Get the modal
+  var modal = document.getElementById('login');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Get the modal
+  var modal1 = document.getElementById('signup');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+  }
+
+  
+
+
+
+
+     </script>
+ </head>
+ <body>
+ <nav>
+          <ul>
+          <li class="number1"><a href="home.html">KAVYA SRI G</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="skill.html">My Skills</a></li>
+          <li><a href="recommendation.html">Recommendation</a></li>
+          <li><a href="latestwork.html">Latest Works</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hire.html">Hire Me</a></li>
+          <li onclick="document.getElementById('login').style.display='block';">Log in</li>
+          <li onclick="document.getElementById('signup').style.display='block';">Sign up</li>
+        </ul>
+      </nav>
+          <!-- The Modal -->
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'"
+      class="fclose" title="Close Modal">&times;</span>
+
+      <!-- Modal Content -->
+      <form name="loginform" class="modal-content" action="authenticate.php" method="POST" >
+    
+        <div class="fcontainer">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="pwd"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pwd" required>
+
+        <!--  <button type="submit" onclick="return validateloginform()">Login</button> -->
+     
+        </div>
+
+        <div class="fcontainer" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="fcancelbtn">CLOSE</button>
+          <button type="submit" onclick="return validateloginform()" class="fcancelbtn">GET IN</button>
+      
+        </div>
+      </form>
+    </div>
+    <!-- ENDING FORM PAGE-->
+
+    <!-- The Modal -->
+    <div id="signup" class="modal1">
+      <span onclick="document.getElementById('signup').style.display='none'"
+      class="fclose" title="Close Modal">&times;</span>
+
+      <!-- Modal Content -->
+      <form  name="signupform" class="modal-content1" action="signup.php" method="POST" >    
+    
+    
+        <div class="fcontainer">
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="fname" required>
+
+          <label for="uname"><b>Last Name</b></label>
+          <input type="text" placeholder="Enter Last name" name="lname" required>
+
+          <label for="uname"><b>Email</b></label>
+          <input type="Email" placeholder="Enter Email" name="mail" required>    <!-- for HTML5 validation -->
+          <br>
+          <label for="uname"><b>User Name</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pwd" required>    <!-- for HTML5 validation -->
+
+          <label for="psw"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Enter Password" name="cnfrmpwd" required>
+
+       <!--   <button type="submit" name="submit" onclick="return validateForm()" >Register</button> -->
+
+     
+        </div>
+
+        <div class="fcontainer" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('signup').style.display='none'" class="fcancelbtn">CLOSE</button>
+       <button type="submit" onclick="return validatesignupform()" class="fcancelbtn">SAVE</button> 
+        </div>
+      </form>
+    </div>
+    <!-- ENDING SIGN UP -->
+
+ <h1>SKILLS&<br>EXPERTISE</h1>
+ <p>Visual Designer Front-end Developer 3D Designer</p>
+  <div class=f1>
+ 	<img src="profile1.png" height="500" width="500">
+ 	
+ <div class=second>
+ 	<table style="margin-top:-150px;" >
+ 		<tr>
+ 			<td><img src="log1.jpg" height="60" weight="60" ></td>
+ 			<td>BRANDING<br>Creating logos and portfolios for<br>your company</td><br>
+ 			<td><img src="log2.jpg" height="60" weight="60" ></td>
+ 			<td>MARKETING<br> Trend designs for a better<br> experience of both images, logos,<br>and websites</td>
+ 		</tr><br>
+ 		<tr>
+ 			<td><img src="log3.jpg" height="60" weight="60" ></td>
+ 			<td>DESIGNING<br>maintaining the quality and<br>productivity in the works to please<br>my clients</td>
+ 			<td><img src="log4.jpg"height="60" weight="60" ></td>
+ 			<td>Programming<br>Developing applications and systems<br>that meets the needs<br>and the streamlinethe work and<br> experience of users</td>
+ 		</tr>
+</table>
+<br>
+<div class="third">
+	<br><br>
+<h2>Smart Digital Solutions</h2><p> A Front-End Developer</p>
+<table>
+	<tr>
+		<td><img src="device01.png"></td>
+		<td><img src="device02.png"></td>
+			<td><img src="device03.png"></td>
+			</tr>
+			</table>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="work experience">
+            <h4 class="work">WORK EXPERIENCE</h4>
+            <p class="work_exp">I am looking to expand my profile while I am on top and while I am young!!</p>
+
+            <br>
+            <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">JULY</p>
+                	<p class="date">2019-PRESENT</p>
+                	<p class="sub"> AARICA INFOSYSTEMS</p>
+                	<p class="role">PYTHON SPECIALIST</p>  
+                </div>
+                <div class="right sk_right">
+                	 <div class="description">
+                	 	<p class="role1">INTERN</p>
+                	 	<p class="desc">Developed an application Employee Management System using Python programming.<br>Employee Management application developed includes tasks like adding, deleting and displaying employee details.</p>
+                	
+                    </div>
+                </div>
+            </div>
+ <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">AUGUST - DECEMBER</p>
+                  <p class="date">2018-2019</p>
+                  <p class="sub"> TORRY HARRIS</p>
+                  <p class="role">WEB DEVELOPER</p>  
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="role1">INTERN</p>
+                    <p class="desc">Developed an website Event Management System using HTML,CSS,PHP,XML.Employee Management System developed includes various events that the user can coose from.</p>
+                  
+                    </div>
+                </div>
+            </div>
+            <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">MAY - JULY</p>
+                  <p class="date">2017-2018</p>
+                  <p class="sub"> BETSOL</p>
+                  <p class="role">DATABASE DESIGNER</p>  
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="role1">INTERN</p>
+                    <p class="desc">Developed an website Online Matrimonial Management System using Java and SQL. Online Matrimonial Management System provides a way where people can find their bride or groom of choice</p>
+                  
+                    </div>
+                </div>
+            </div>
+<br>
+<br>
+<div class="education">
+            <h4 class="edu">EDUCATION</h4>
+            <p class="work_exp">I am looking to expand my profile while I am on top and while I am young!!</p>
+
+            <br>
+            <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">AUGUST - PRESENT</p>
+                  <p class="date">2019-PRESENT</p>
+                  <hr>
+                  <p class="sub">MASTER'S DEGREE</p>  
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="subj">MASTERS IN COMPUTER SCIENCE</p>
+                    <p class="desc">University of Computer Science</p>
+                  
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+ <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">AUGUST - MAY</p>
+                  <p class="date">2015-2019</p>
+                  <p class="sub"> ENGINEERING</p>
+                   <
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="subj">BACHELORS IN COMPUTER SCIENCE</p>
+                    <p class="desc">University of Computer Science</p>
+                  
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="sec">
+                <div class="left sk_left">
+                  <p class="month">MAY - JULY<</p>
+                  <p class="date">2000-2013</p>
+                  <hr>
+                  <p class="sub"> HIGH SCHOOL</p>
+                    
+                </div>
+                <div class="right sk_right">
+                   <div class="description">
+                    <p class="role1">ICSE</p>
+                    <p class="desc">University of Computer Science</p>
+                  
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>
